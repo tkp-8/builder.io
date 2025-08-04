@@ -24,3 +24,150 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom font classes */
+.font-plus-jakarta {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.font-system {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.font-arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header styles */
+.header {
+  backdrop-filter: blur(10px);
+}
+
+/* Navigation styles */
+.nav-link {
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #666;
+}
+
+.cta-button {
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #333;
+}
+
+/* Mobile menu button */
+.mobile-menu-button {
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-menu-button div {
+  width: 20px;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.3s ease;
+}
+
+/* Section spacing */
+.hero-section {
+  padding-top: 72px; /* Account for fixed header */
+}
+
+/* Image styles */
+.image-section {
+  padding: 60px 0;
+}
+
+/* Service grid responsive */
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Stats grid responsive */
+.stats-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* FAQ styles */
+.faq-question:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.faq-answer {
+  transition: height 0.3s ease;
+}
+
+/* Footer grid responsive */
+.footer-grid {
+  grid-template-columns: 2fr 1fr;
+  gap: 60px 76px;
+}
+
+/* Social links */
+.social-link:hover {
+  opacity: 0.7;
+}
+
+/* Container max-width */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+  
+  .mobile-menu-button {
+    display: flex !important;
+  }
+  
+  .hero-title,
+  .section-title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .faq-wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title,
+  .section-title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  
+  .step-number,
+  .step-title,
+  .service-title,
+  .stat-number {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
